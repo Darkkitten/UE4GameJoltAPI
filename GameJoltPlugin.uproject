@@ -12,11 +12,6 @@
 	],
 	"Plugins": [
 		{
-			"Name": "MJAssetLibrary",
-			"Enabled": false,
-			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/345540f858924583a9faec1f10519c95"
-		},
-		{
 			"Name": "GameJoltAPI",
 			"Enabled": true
 		}
