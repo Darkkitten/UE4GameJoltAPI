@@ -4,8 +4,12 @@ namespace UnrealBuildTool.Rules
 {
 	public class GameJoltAPI : ModuleRules
 	{
-		public GameJoltAPI(TargetInfo Target)
+		public GameJoltAPI(ReadOnlyTargetRules Target) : base(Target)
 		{
+			PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+			bFasterWithoutUnity = true;
+			MinFilesUsingPrecompiledHeaderOverride = 1;
+		
 			PublicIncludePaths.AddRange(
 				new string[] {
 					// ... add public include paths required here ...
@@ -14,7 +18,7 @@ namespace UnrealBuildTool.Rules
 
 			PrivateIncludePaths.AddRange(
 				new string[] {
-					"Developer/GameJoltAPI/Private",
+					"GameJoltAPI/Private",
 					// ... add other private include paths required here ...
 				}
 				);
@@ -22,8 +26,7 @@ namespace UnrealBuildTool.Rules
 			PublicDependencyModuleNames.AddRange(
 				new string[]
 				{
-					"Core",
-                    "HTTP",
+                    "HTTP"
 					// ... add other public dependencies that you statically link with here ...
 				}
 				);
@@ -31,6 +34,10 @@ namespace UnrealBuildTool.Rules
 			PrivateDependencyModuleNames.AddRange(
 				new string[]
 				{
+					"Core",
+					"CoreUObject",
+					"Engine",
+					"Projects"
 					// ... add private dependencies that you statically link with here ...
 				}
 				);

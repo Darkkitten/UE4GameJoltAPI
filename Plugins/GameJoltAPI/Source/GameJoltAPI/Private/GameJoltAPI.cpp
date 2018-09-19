@@ -287,7 +287,8 @@ void FGameJoltAPI::AddScore(FString Score, int32 Sort, int32 TableID, FString Ex
 	}
 	else if(IsGuest())
 	{
-		ProcessCall(GAME_JOLT_API_URL + FString("v1/scores/add/?game_id=") + FString::FromInt(GameID) + FString("&username=") + FString("&user_token=") + FString("&score=") + Score + FString("&sort=") + Sort + FString("&guest=") + UserName + (TableID >= 0 ? (FString("&table_id=") + FString::FromInt(TableID)) : "") + (ExtraData != "" ? (FString("&extra_data=") + ExtraData) : ""), ERequest::REQUEST_AddScore);
+		//TODO: Rewrite or Fix this if it doesn't work right?
+		ProcessCall(GAME_JOLT_API_URL + FString("v1/scores/add/?game_id=") + FString::FromInt(GameID) + FString("&username=") + FString("&user_token=") + FString("$score=") + Score +  FString("&sort=") + FString::FromInt(Sort) +  FString("&guest=") + FString(UserName) + (TableID >= 0 ? (FString("&table_id=") + FString::FromInt(TableID)) : "") + (ExtraData != "" ? (FString("&extra_data=") + ExtraData) : ""), ERequest::REQUEST_AddScore);
 	}
 }
 /********************************************************************************************************/

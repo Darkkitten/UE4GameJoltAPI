@@ -2,6 +2,9 @@
 /* Copyright by Kacper "Ogniok" Kowalczuk */
 /********************************************************************************************************/
 #pragma once
+
+#include "Core.h"
+#include "GameJoltAPIPrivatePCH.h"
 /********************************************************************************************************/
 struct FGameJoltRequestData
 {

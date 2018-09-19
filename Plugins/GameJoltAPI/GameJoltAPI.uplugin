@@ -6,7 +6,7 @@
 	"VersionName" : "1.0",
 	"CreatedBy" : "Kacper Kowalczuk (Ogniok)",
 	"CreatedByURL" : "http://firelinegames.com",
-	"EngineVersion" : "4.8.0",
+	"EngineVersion" : "4.20.0",
 	"Description" : "Simple plugin that integrates Game Jolt API with Unreal Engine 4 and allows to easily access it.",
 	"Category" : "Misc",
 	"EnabledByDefault" : true,
